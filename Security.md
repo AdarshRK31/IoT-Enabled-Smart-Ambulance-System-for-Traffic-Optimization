@@ -1,11 +1,9 @@
-# 24CYS333 - Internet of Things
-![](https://img.shields.io/badge/Batch-22CYS-lightgreen) ![](https://img.shields.io/badge/UG-blue) ![](https://img.shields.io/badge/Subject-IoT-blue)
-<br/>
-![](https://img.shields.io/badge/Lecture-2-orange) ![](https://img.shields.io/badge/Practical-3-orange) ![](https://img.shields.io/badge/Credits-3-orange) <br/>
+
+
 
 ## IoT#01 - IoT-Driven Smart Ambulance System for Real-Time Traffic Management and Emergency Response Optimization
 
-![](https://img.shields.io/badge/Member-Adarsh_R_K-gold) ![](https://img.shields.io/badge/Member-Namitha_Sudhishkumar_Nair-gold) ![](https://img.shields.io/badge/Member-Anagh_Shaji-gold) <br/> 
+
 
 A Smart Ambulance IoT application requires secure and confidential communication to protect patient data, ensure real-time monitoring, and enable seamless coordination between medical devices, ambulances, and hospitals.
 
