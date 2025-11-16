@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Ambulance Route Optimization</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCc2fnSnS7h-40rVMlHJV5kJOzwZCy1kJY&callback=initMap" async defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #map {
+            height: 500px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        #charts-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .chart-box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        iframe {
+            border: none;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h2>Optimized Route for Smart Ambulance</h2>
+    <div id="map"></div>
+
+    <!-- ThingSpeak Live Data Charts -->
+    <h2>Live Patient Monitoring (ThingSpeak Charts)</h2>
+    <div id="charts-container">
+        <div class="chart-box">
+            <h3>Heart Rate (BPM)</h3>
+            <iframe id="heart-rate-chart" width="450" height="260"></iframe>
+        </div>
+        <div class="chart-box">
+            <h3>ECG Signal</h3>
+            <iframe id="ecg-chart" width="450" height="260"></iframe>
+        </div>
+        <div class="chart-box">
+            <h3>Oxygen Level (%)</h3>
+            <iframe id="oxygen-chart" width="450" height="260"></iframe>
+        </div>
+    </div>
+
+    <script>
+        function initMap() {
+            let map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: { lat: 10.911, lng: 76.896 } // Example starting location, 
+            });
+
+            let directionsService = new google.maps.DirectionsService();
+            let directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            // Start and Destination Locations
+            let start = new google.maps.LatLng(10.911038587709195, 76.896978411754); // Example Start
+            let end = new google.maps.LatLng(10.906971175048051, 76.95671617972229);   // Example Hospital10.906971175048051, 
+
+            let request = {
+                origin: start,
+                destination: end,
+                travelMode: google.maps.TravelMode.DRIVING
+            };
+
+            // Request the route from Google Maps
+            directionsService.route(request, function (result, status) {
+                if (status === google.maps.DirectionsStatus.OK) {
+                    directionsRenderer.setDirections(result);
+                } else {
+                    console.error("Google Directions API error:", status);
+                    alert("Could not fetch route. Check API key and internet connection.");
+                }
+            });
+        }
+
+        // Function to Embed ThingSpeak Charts
+        function loadThingSpeakCharts() {
+            const channelID = "2867826";  // Your ThingSpeak Channel ID
+
+            document.getElementById("heart-rate-chart").src = `https://thingspeak.com/channels/${channelID}/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true`;
+            document.getElementById("ecg-chart").src = `https://thingspeak.com/channels/${channelID}/charts/2?bgcolor=%23ffffff&color=%2300aaff&dynamic=true`;
+            document.getElementById("oxygen-chart").src = `https://thingspeak.com/channels/${channelID}/charts/3?bgcolor=%23ffffff&color=%2320d65c&dynamic=true`;
+        }
+
+        // Load charts when the page loads
+        window.onload = loadThingSpeakCharts;
+    </script>
+</body>
+</html>
