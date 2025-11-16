@@ -6,7 +6,6 @@
 
 ![](https://img.shields.io/badge/Member-Adarsh_R_K-gold) ![](https://img.shields.io/badge/Member-Namitha_Sudhishkumar_Nair-gold) ![](https://img.shields.io/badge/Member-Anagh_Shaji-gold) <br/> 
 ![](https://img.shields.io/badge/SDG-3-darkgreen) ![](https://img.shields.io/badge/SDG-9-darkgreen) <br/> 
-![](https://img.shields.io/badge/Reviewed-23rd_Jan_2025-brown) ![](https://img.shields.io/badge/Final_Review-04th_May_2025-darkgreen) <br/>
 ![](https://img.shields.io/badge/AIC_Raise_Hackathon-GM-gold) <br/>
 ![](https://img.shields.io/badge/Anokha_TechFair-Recommended-black) ![](https://img.shields.io/badge/Publication-In_Progress-gold) <br/>
 ![](https://img.shields.io/badge/IA-13944-purple) ![](https://img.shields.io/badge/NIR-IR2025--997967-purple)  
@@ -251,5 +250,6 @@ The admin panel is a web-based dashboard that displays live tracking of all ambu
 2. Godwin, J. J., Krishna, B. S., Rajeshwari, R., Sushmitha, P., & Yamini, M. (2021). **IoT based intelligent ambulance monitoring and traffic control system.** _Further Advances in Internet of Things in Biomedical and Cyber Physical Systems_, 269-278.  
 
 3. Sakthidevi, I., Megha, S.,Hindhu Shree, G.,ABARNA, U.,Ruba, V., **IOT Smart Ambulance: Revolutionizing Emergency Response & Patient Care**, _International Journal of Creative Research Thoughts (IJCRT)_, ISSN:2320-2882, Volume.12, Issue 3
+
 
 
